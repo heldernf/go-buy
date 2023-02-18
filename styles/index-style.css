@@ -41,6 +41,8 @@ header img {
     width: 250px;
     margin: 25px auto 0px auto;
     text-align: center;
+    position: sticky;
+    top: 0px;
 }
 
 .search-container input {
