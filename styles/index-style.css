@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+:root {
+    --Open-Sans: 'Open Sans', sans-serif;
+}
 
 * {
     margin: 0;
@@ -61,6 +64,12 @@ input[type="search"]::-webkit-search-cancel-button {
     background-position: center;
     cursor: pointer;
     border: none;
+    font-size: 1px;
+}
+
+input::placeholder {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.452);
 }
 
 /* PRINCIPAL/PRODUTOS */
@@ -87,7 +96,7 @@ main {
 
 .div-img { /* DIV QUE TEM COMO FILHO O <img> */
     background-color: rgb(255, 255, 255);
-    height: 70%;
+    height: 66%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +105,7 @@ main {
 
 .div-img img {
     width: 215px;
-    height: 200px;
+    height: 195px;
     object-fit: cover;
     transition: .3s;
 }
@@ -104,19 +113,18 @@ main {
 .div-pm {
     border-top: 1px solid #ebebeb;
     background-color: rgb(255, 255, 255);
-    height: 15%;
+    height: 20%;
     width: 100%;
-    padding: 10px 6px;
+    padding: 6px 8px;
     display: flex;
 }
 
 .div-pm p {
-    color: #6f7a82;
+    color: #000000;
     font-size: 0.95em;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    word-break: break-all;
-    hyphens: auto;
+    font-family: var(--Open-Sans);
+    font-weight: 400;
+    font-size: 13px;
 }
 
 .description-product {
@@ -124,7 +132,7 @@ main {
 }
 
 .div-a-button { /* DIV QUE TEM COMO FILHO O <a> */
-    height: 15%;
+    height: 14%;
     background-color: #48d4ff;
     border-radius: 0px 0px 5px 5px;
     transition: .3s;
@@ -142,14 +150,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--Open-Sans);
+    font-weight: 600;
 }
 
 /* FINAL/CONTATO/LOGO */
 
 footer {
     background-color: rgb(255, 255, 255);
-    height: 55px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,47 +169,92 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 85px;
 }
 
-.div-footer-img {
-    width: 35%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 1px solid rgba(126, 124, 124, 0.89);
-}
-
-.div-footer-img img {
-    height: 70%;
-    object-fit: cover;
-}
-
-.container-p-social {
-    width: 65%;
+.div-footer-img-p {
+    width: 38%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 20px;
+    border-right: 1px solid rgba(126, 124, 124, 0.89);
+    padding: 0px 4px;
+}
+
+.div-footer-img-p img {
+    height: 41%;
+    object-fit: cover;
+}
+
+.div-footer-img-p p {
+    color: rgba(145, 141, 141, 0.89);
+    font-size: 0.6em;
+    text-align: center;
+}
+
+.container-p-social {
+    width: 62%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-medias-social {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-p-social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 40%;
+}
+
+.div-p-social p {
+    color: rgba(0, 0, 0, 0.849);
+    font-size: 0.97em;
+    font-family: var(--Open-Sans);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.div-icons-social {
+    height: 60%;
+    display: flex;
+    column-gap: 8px;
+}
+
+.div-icons-social a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-icons-social a img {
+    width: 28px;
 }
 
 .div-p {
     height: 30%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
 }
 
 .div-p p {
     color: rgba(145, 141, 141, 0.89);
     font-size: 0.7em;
-}
-
-.div-medias-social {
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    column-gap: 15px;
 }
