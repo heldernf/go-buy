@@ -14,6 +14,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+    list-style-type: none;
     color: white;
 }
 
@@ -73,7 +74,7 @@ header {
     outline: none;
     font-size: 1em;
     font-family: var(--Poppins);
-    font-weight: 500;
+    font-weight: 400;
     border: 1px solid #ebebeb;
     color: rgba(126, 124, 124, 0.89);
 }
@@ -94,6 +95,41 @@ input[type="search"]::-webkit-search-cancel-button {
 input::placeholder {
     font-size: 0.9em;
     color: rgba(0, 0, 0, 0.452);
+}
+
+nav {
+    border-top: 1px solid #ebebeb;
+    background-color: var(--back-white);
+    position: sticky;
+    top: 50px;
+    height: 28px;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+
+nav ul li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    padding: 0px 4px;
+    font-family: var(--Poppins);
+    font-weight: 500;
+    font-size: 0.93em;
+}
+
+.active {
+    text-decoration: underline #48d4ff solid 2px;
 }
 
 /* PRINCIPAL/PRODUTOS */
@@ -131,24 +167,25 @@ main {
     width: 215px;
     height: 195px;
     object-fit: cover;
-    transition: .3s;
 }
 
 .div-pm {
     border-top: 1px solid #ebebeb;
     background-color: var(--back-white);
-    height: 20%;
+    height: 21%;
     width: 100%;
-    padding: 6px 8px;
-    display: flex;
+    padding: 4px 8px;
 }
 
 .div-pm p {
-    color: #000000;
-    font-size: 0.95em;
+    color: black;
     font-family: var(--Open-Sans);
     font-weight: 400;
     font-size: 13px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 15.9px;
 }
 
 .description-product {
@@ -156,7 +193,7 @@ main {
 }
 
 .div-a-button { /* DIV QUE TEM COMO FILHO O <a> */
-    height: 14%;
+    height: 13%;
     background-color: #48d4ff;
     border-radius: 0px 0px 5px 5px;
     transition: .3s;
