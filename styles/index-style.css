@@ -5,6 +5,7 @@
     --Open-Sans: 'Open Sans', sans-serif;
     --Poppins: 'Poppins', sans-serif;
     --back-white: white;
+    --back-transparente: rgba(0, 0, 255, 0);
 }
 
 * {
@@ -64,6 +65,7 @@ header {
 
 .search-container {
     width: 68%;
+    position: relative;
 }
 
 .search-container input {
@@ -97,6 +99,29 @@ input::placeholder {
     color: rgba(0, 0, 0, 0.452);
 }
 
+#search-button {
+    background-color: var(--back-white);
+    border-radius: 50%;
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    left: 100%;
+    top: 100%;
+    transform: translate(-130%, -130%);
+}
+
+#search-icon {
+    color: #8a9097;
+    font-size: 23px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#search-icon:hover {
+    cursor: pointer;
+}
+
 nav {
     border-top: 1px solid #ebebeb;
     background-color: var(--back-white);
@@ -126,10 +151,11 @@ nav ul li a {
     font-family: var(--Poppins);
     font-weight: 500;
     font-size: 0.93em;
+    border-radius: 3px;
 }
 
 .active {
-    text-decoration: underline #48d4ff solid 2px;
+    background-color: #8a90972d;
 }
 
 /* PRINCIPAL/PRODUTOS */
