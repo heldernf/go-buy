@@ -92,6 +92,7 @@ input[type="search"]::-webkit-search-cancel-button {
     cursor: pointer;
     border: none;
     font-size: 1px;
+    margin-right: 25px;
 }
 
 input::placeholder {
@@ -348,22 +349,4 @@ footer {
 .div-p p {
     color: rgba(145, 141, 141, 0.89);
     font-size: 0.7em;
-}
-
-#load-more-div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-#load-more {
-    background-color: #48d4ff;
-    color: white;
-    padding: 10px;
-    font-size: 1.3em;
-    cursor: pointer;
-    width: 1370px;
-    border-radius: 4px;
 }
