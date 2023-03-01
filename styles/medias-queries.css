@@ -37,6 +37,10 @@
         height: 29px;
     }
 
+    nav ul #show-or-hide-btn { /* Botão "Mostra ou Esconder" do filtro de "Lojas" */
+        font-size: 0.95em;
+    }
+
     nav ul li a {
         font-size: 0.95em;
     }
@@ -93,6 +97,10 @@
     nav {
         top: 60px;
         height: 30px;
+    }
+
+    nav ul #show-or-hide-btn { /* Botão "Mostra ou Esconder" do filtro de "Lojas" */
+        font-size: 1em;
     }
 
     nav ul li a {
@@ -185,6 +193,10 @@
         height: 31px;
     }
 
+    nav ul #show-or-hide-btn { /* Botão "Mostra ou Esconder" do filtro de "Lojas" */
+        font-size: 1.06em;
+    }
+
     nav ul li a {
         font-size: 1.06em;
     }
@@ -271,6 +283,10 @@
     nav {
         top: 67px;
         height: 32px;
+    }
+
+    nav ul #show-or-hide-btn { /* Botão "Mostra ou Esconder" do filtro de "Lojas" */
+        font-size: 1.08em;
     }
 
     nav ul li a {

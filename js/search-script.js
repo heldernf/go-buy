@@ -1,3 +1,5 @@
+// SISTEMA DE BUSCA, ADICIONA ESTILO AO FILTROS
+
 const searchInput = document.querySelector('#search-bar');
 const searchButton = document.querySelector('#search-button');
 let platformFilter = 'all';
@@ -61,4 +63,46 @@ searchInput.addEventListener('keydown', event => {
       }
     });
   }
+});
+
+// MOSTRA E OCULTA OS FILTROS (nav ul li)
+
+var btn_filter = document.querySelector('#show-or-hide-btn');
+var option_filter = document.querySelectorAll('nav ul li');
+
+for (var i = 0; i < option_filter.length; i++) {
+  option_filter[i].style.opacity = 0;
+  option_filter[i].style.display = 'none';
+  option_filter[i].style.height = 0;
+  option_filter[i].style.transition = 'opacity 0.3s ease-in-out, height 0.3s ease-in-out';
+}
+
+btn_filter.addEventListener('click', function() {
+  for (var i = 0; i < option_filter.length; i++) {
+    if (option_filter[i].style.opacity == "0") {
+      option_filter[i].style.display = 'flex';
+      option_filter[i].style.height = 'auto';
+      setTimeout((function(i) {
+        option_filter[i].style.opacity = 1;
+      }).bind(null, i), 50);
+    } else {
+      option_filter[i].style.opacity = 0;
+      option_filter[i].style.height = 0;
+      setTimeout((function(i) {
+        option_filter[i].style.display = 'none';
+      }).bind(null, i), 300);
+    }
+  }
+});
+
+// EMBARALHA TODOS OS PRODUTOS (product-container)
+
+const productsContainer = document.getElementById("products-container");
+const containerProducts = productsContainer.querySelectorAll(".container-product");
+const containerProductsArray = Array.from(containerProducts);
+
+containerProductsArray.sort(() => Math.random() - 0.5);
+
+containerProductsArray.forEach(containerProduct => {
+  productsContainer.appendChild(containerProduct);
 });

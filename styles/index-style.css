@@ -4,7 +4,11 @@
 :root {
     --Open-Sans: 'Open Sans', sans-serif;
     --Poppins: 'Poppins', sans-serif;
-    --back-white: white;
+    --back-white: #ffffff;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --cor-principal: #48d4ff;
+    --cor-principal-2: #1b85ff;
 }
 
 * {
@@ -136,6 +140,47 @@ nav {
     position: sticky;
     top: 50px;
     height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul #show-or-hide-btn { /* Botão "Mostra ou Esconder" do filtro de "Lojas" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: var(--Poppins);
+    font-weight: 500;
+    font-size: 0.9em;
+    border-radius: 3px;
+    padding: 0px 16px 0px 4px;
+    background-color: #ebebeb;
+    border-bottom: 2px solid var(--cor-principal-2);
+    color: black;
+    position: relative;
+    transition: .2s;
+}
+
+nav ul #show-or-hide-btn:hover {
+    background-color: var(--cor-principal-2);
+    color: var(--color-white);
+}
+
+nav ul #show-or-hide-btn:hover #arrow-right {
+    color: var(--color-white);
+}
+
+nav ul #show-or-hide-btn #arrow-right { /* Flecha ao lado da palavra "Lojas" apontando pra direita */
+    color: black;
+    position: absolute;
+    top: 53%;
+    left: 100%;
+    transform: translate(-90%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
 }
 
 nav ul {
@@ -143,28 +188,34 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 15px;
+    column-gap: 8px;
 }
 
 nav ul li {
     height: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
+nav ul li a:hover {
+    background-color: var(--cor-principal-2);
+    color: var(--color-white);
+    transition: .2s;
+}
+
 nav ul li a {
-    color: rgb(0, 0, 0);
+    color: var(--color-black);
     padding: 0px 4px;
     font-family: var(--Poppins);
     font-weight: 500;
-    font-size: 0.93em;
+    font-size: 0.9em;
     border-radius: 3px;
 }
 
 .active { /*CLASS PARA QUE O FILTRO SELECIONADO, FIQUE ESTILIZADO DE UMA FORMA QUE FIQUE DESTACADO DOS DEMAIS FILTROS */
     background-color: #8a90972d;
-    border-bottom: 2px solid #48d4ff;
+    border-bottom: 2px solid var(--cor-principal-2);
 }
 
 /* MAIN (PRODUTOS) | MAIN (PRODUTOS) | MAIN (PRODUTOS) | MAIN (PRODUTOS) */
@@ -211,7 +262,7 @@ main .container-product .dpai-p {
 }
 
 main .container-product .dpai-p p {
-    color: black;
+    color: var(--color-black);
     font-family: var(--Open-Sans);
     font-weight: 400;
     font-size: 13px;
@@ -227,13 +278,14 @@ main .container-product .dpai-p .description-product {
 
 main .container-product .dpai-a-btn {
     height: 13%;
-    background-color: #48d4ff;
+    background-color: var(--cor-principal-2);
     border-radius: 0px 0px 5px 5px;
     transition: .3s;
 }
 
 main .container-product .dpai-a-btn:hover {
-    background-color: #42caf3;
+    background-color: #1a74db;
+    text-decoration: underline;
 }
 
 main .container-product .dpai-a-btn a {
